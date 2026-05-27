@@ -27,6 +27,7 @@ public class TC_001_Login extends BaseTest {
 		Scanner scn = new Scanner(System.in);
 
 		String otp = scn.next();
+		System.out.println("Enter OTP:");
 
 		driver.findElement(By.xpath("(//input[@inputmode='text'])[1]")).sendKeys(otp);
 

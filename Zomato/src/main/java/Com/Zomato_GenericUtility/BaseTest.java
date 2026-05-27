@@ -36,7 +36,7 @@ public class BaseTest {
 
 	@BeforeSuite
 	public void bs() {
-		System.out.println("@BeforeSuite    DataBase Connected");
+		System.out.println("@BeforeSuite   DataBase Connected");
 	}
 
 	@BeforeTest
