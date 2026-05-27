@@ -33,6 +33,8 @@ public class BaseTest {
 	public Login_page login;
 	public Address address;
 	
+	
+	
 
 	@BeforeSuite
 	public void bs() {
