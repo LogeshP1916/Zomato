@@ -3,7 +3,6 @@ package com.zomato.TestScripts;
 import java.io.IOException;
 import java.util.Scanner;
 
-import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -44,8 +43,8 @@ public class TC_001_Login extends BaseTest {
 		driver.findElement(By.xpath("(//input[@inputmode='text'])[6]")).sendKeys(otp5);
 
 		Thread.sleep(5000);
-		
-		
+
+		scn.close();
 
 	}
 
