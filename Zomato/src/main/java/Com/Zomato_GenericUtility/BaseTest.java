@@ -35,6 +35,7 @@ public class BaseTest {
 	
 	
 	
+	
 
 	@BeforeSuite
 	public void bs() {
@@ -57,8 +58,6 @@ public class BaseTest {
 		String browser = fileUtility.readDataFromPropertyFile("browserName");
 		String url = fileUtility.readDataFromPropertyFile("baseUrl");
 
-//		String browser = System.getProperty("browserName");
-//		String url = System.getProperty("baseUrl");
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();

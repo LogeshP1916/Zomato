@@ -35,10 +35,10 @@ public class Address {
 	@FindBy(xpath = "//span[contains(text(),'Confirm')]")
 	private WebElement confirmBtn;
 
-	@FindBy(xpath = "//label[contains(text(),'Complete')]")
+	@FindBy(xpath = "(//input[@type='text'])[2]")
 	private WebElement CompleteAddress;
 
-	@FindBy(xpath = "//label[contains(text(),'Area')]")
+	@FindBy(xpath = "(//input[@type='text'])[5]")
 	private WebElement Area;
 
 	@FindBy(xpath = "(//span[text()='Home'])[2]")
@@ -47,7 +47,7 @@ public class Address {
 	@FindBy(xpath = "//span[text()='Save and proceed']")
 	private WebElement save;
 	
-	@FindBy(xpath = "//p[text()='Home']")
+	@FindBy(xpath = "(//div[@class='sc-bSbAYC iYTrBE'])[1]")
 	private WebElement home;
 
 	public WebElement getHome() {

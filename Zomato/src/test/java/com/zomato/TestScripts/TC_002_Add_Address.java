@@ -5,6 +5,8 @@ import java.time.Duration;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import Com.Zomato.POM.Address;
@@ -23,7 +25,7 @@ public class TC_002_Add_Address extends TC_001_Login {
 
 		address.getAddAddress().click();
 
-		address.getArea().click();
+		address.getDeliveryArea().click();
 
 		address.getSearchLocation().sendKeys(fileUtility.readDataFromExcelFile("Sheet1", 0, 0) + Keys.ENTER);
 
@@ -31,15 +33,23 @@ public class TC_002_Add_Address extends TC_001_Login {
 
 		address.getConfirmBtn().click();
 
-		address.getCompleteAddress().sendKeys(fileUtility.readDataFromExcelFile("Sheet1", 0, 1));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-		address.getArea().sendKeys(fileUtility.readDataFromExcelFile("Sheet1", 0, 2));
+//		webDriverUtility.javaScriptClick(driver, address.getCompleteAddress());
+
+		wait.until(ExpectedConditions.elementToBeClickable(address.getCompleteAddress()))
+				.sendKeys(fileUtility.readDataFromExcelFile("Sheet1", 0, 1));
+
+//		webDriverUtility.javaScriptClick(driver, address.getArea());
+
+		wait.until(ExpectedConditions.elementToBeClickable(address.getArea()))
+				.sendKeys(fileUtility.readDataFromExcelFile("Sheet1", 0, 2));
 
 		address.getRadiobtn().click();
 
 		address.getSave().click();
 
-		address.getHome().click();
+//		address.getHome().click();
 
 	}
 
